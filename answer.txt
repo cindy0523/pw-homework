@@ -1,0 +1,5 @@
+Câu lệnh để cài đặt email và name là:
+// Name
+git config user.name "Udemy - Minh Thu"
+// Email
+git config user.mail "minhthuphan2002@gmail.com"
