@@ -1,16 +1,37 @@
 1. Giải thích các câu lệnh: 
-git init: khởi tạo 1 repo git mới trong thư mục hiện tại
-git add <file_name>: thêm 1 file cụ thể vào vùng Staging để chuẩn bị commit
-git add . : thêm toàn bộ file vào vùng Staging để chuẩn bị commit
-git commit -m “message” : tạo 1 commit với thông điệp có nghĩa đi kèm
+git init
+- khởi tạo 1 repo git mới trong thư mục hiện tại
+
+git add <file_name>
+- thêm 1 file cụ thể vào vùng Staging để chuẩn bị commit
+
+git add . 
+- thêm toàn bộ file vào vùng Staging để chuẩn bị commit
+
+git commit -m “message” 
+- tạo 1 commit với thông điệp có nghĩa đi kèm
 
 2. Hãy tưởng tượng có 1 folder lesson-2 mới được tạo. 
-Hãy liệt kê các file theo từng vùng sau khi thao tác một loạt các lệnh sau 
-(sẽ rất tuyệt nếu bạn không chạy lệnh trên máy thật, 
-mà bạn suy nghĩ trong đầu để ra được kết quả; bạn sẽ nhớ rất lâu đấy ^^):
+
 a. Tạo 3 file: file1, file2, file3
-b. Chạy lệnh: git init (vùng Working directory)
-c. Chạy lệnh: git commit -m”init project” (vùng Repository)
-d. Chạy lệnh: git add file1 (vùng Staging)
-e. Chạy lệnh: git commit -m”add file1” (vùng Repository)
-f. Chạy lệnh: git add file (vùng Staging)
+- Working dir: file1, file2, file3 (nhưng chưa dc git theo dõi)
+
+b. Chạy lệnh: git init 
+- Working dir: file1, file2, file3 (và được git theo dõidõi)
+
+c. Chạy lệnh: git commit -m”init project” 
+- Working dir: file1, file2, file3
+
+d. Chạy lệnh: git add file1 
+- Working dir: file2, file3
+- Staging: file1
+
+e. Chạy lệnh: git commit -m”add file1” 
+- Working dir: file2, file3
+- Staging:
+- Repo: file 1
+
+f. Chạy lệnh: git add file
+- Working dir: file2, file3
+- Staging:
+- Repo: file 1
