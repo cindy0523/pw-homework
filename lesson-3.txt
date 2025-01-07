@@ -1,9 +1,18 @@
 1. Giải thích các câu lệnh: 
 
 git commit --amend
+- câu lệnh thay đổi message của commit gần nhất
+- sau khi gõ xong sẽ vào chế độ terminal:
+i: để vào mode insert
+esc: để lưu và thoát chế độ insert
+:wq: để thoátthoát
 
 git commit --amend-m”<message>”
+- câu lệnh thay đổi commit message gần nhất 1 cách nhanh chóng mà ko cần vào trình soạn thảo
 
 git restore --staged <file>
+lệnh để gỡ 1 file từ vùng staging về vùng working directory
 
 git reset HEAD~1.
+lệnh để gỡ 1 commit gần nhất từ vùng reporepo về lại vùng working directory
+(như chưa hề commitcommit)
