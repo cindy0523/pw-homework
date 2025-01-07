@@ -11,8 +11,71 @@ git commit --amend-m”<message>”
 - câu lệnh thay đổi commit message gần nhất 1 cách nhanh chóng mà ko cần vào trình soạn thảo
 
 git restore --staged <file>
-lệnh để gỡ 1 file từ vùng staging về vùng working directory
+- lệnh để gỡ 1 file từ vùng staging về vùng working directory
 
 git reset HEAD~1.
-lệnh để gỡ 1 commit gần nhất từ vùng reporepo về lại vùng working directory
+- lệnh để gỡ 1 commit gần nhất từ vùng reporepo về lại vùng working directory
 (như chưa hề commitcommit)
+
+2. 
+a. Tạo 3 file: file1, file2, file3
+- sau khi tạo 3 file thì nó sẽ ở vùng Working directory
+nhưng sẽ ko được Git theo dõi
+
+b. Chạy lệnh: git init
+- 3 file sẽ ở vùng Working Directory và đc Git theo dõi
+
+c. Chạy lệnh: git commit -m”init project”
+- 3 file vẫn sẽ ở vùng Working Directory
+vì chưa đc AddAdd
+
+d. Chạy lệnh: git add file1
+- Working directory: file2, file3
+- Staging: file1file1
+
+e. Chạy lệnh: git commit -m”add file1”
+- Working Dir: file2, file3
+- Staging:
+- Repo: file1
+
+f. Chạy lệnh: git add .
+- Working dir:
+- Staging: file2, file3
+- Repo: file1 
+
+g. Chạy lệnh: git restore --staged file2
+- Working dir: file2
+- Staging: file3
+- Repo: file1 
+
+h. Chạy lệnh: git commit -m”add all files”
+- Working dir: file2
+- Staging: 
+- Repo: file1, file3
+
+i. Chạy lệnh: git reset HEAD~1
+- Working dir: file2
+- Staging: file3
+- Repo: file1
+
+3. Hãy tưởng tượng có 1 folder lesson-3-git mới được tạo ra. 
+a. Chạy lệnh git init
+- Working dir: lesson-3-git
+
+b. Tạo file file1.txt, file2.txt, oops/file3.txt.
+- Working dir: lesson-3-git, file1.txt, file2.txt, oops/file3.txt
+
+c. Thêm file .gitignore, thêm vào 2 dòng:
+i. file1.txt
+ii. oops/
+
+- Working dir:lesson-3-git, file2.txt
+
+d. Chạy lệnh: git add .
+- Working dir:
+- Staging: lesson-3-git, file2.txt
+
+e. Chạy lệnh: git commit -m"init project"
+- Working dir:
+- Staging: 
+- Repo: lesson-3-git, file2.txt
